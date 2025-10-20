@@ -1,9 +1,52 @@
 body {
   margin: 0 auto;
   font-family: "Fira Code", sans-serif;
-  min-height: 100vh;
-  background-color: #f6f7f8;
-  overflow-wrap: break-word;
+  min-height: 100dvh;
+  background-color: #292929;
+}
+
+button {
+  font-family: "Karla", sans-serif;
+  font-size: 18px;
+  border: 1px solid white;
+  border-radius: 25px;
+  background-color: #292929;
+  height: 48px;
+  padding: 0 24px;
+  color: white;
+  cursor: pointer;
+  overflow: hidden;
+  position: relative;
+  transition: border-color 0.3s ease;
+
+  &::before {
+    content: attr(data-text);
+    position: absolute;
+    left: -100%;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    color: #3dcfb6;
+  }
+
+  &:hover {
+    border-color: #3dcfb6;
+    color: transparent;
+  }
+
+  &:hover::before {
+    animation: slideText 1.5s ease-in-out infinite;
+  }
+}
+
+/* Keyframes */
+@keyframes slideText {
+  0%   {left:0%; top:50%;}
+  48%  {left:-100%; top:50%;}
+  49%  {left:-100%; top:-50%;}
+  50%  {left:100%; top:-50%;}
+  51%  {left:100%; top:50%;}
+  100% {left:0%; top:50%;}
 }
 
 /* Fonts */
