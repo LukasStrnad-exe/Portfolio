@@ -3,9 +3,21 @@ body {
   font-family: "Fira Code", sans-serif;
   min-height: 100dvh;
   background-color: #292929;
+  color: white;
 }
 
-button {
+a {
+  text-decoration: none;
+  color: white;
+}
+
+.wrapper {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 5%;
+}
+
+.btn {
   font-family: "Karla", sans-serif;
   font-size: 18px;
   border: 1px solid white;
@@ -26,11 +38,11 @@ button {
     top: 50%;
     transform: translateY(-50%);
     width: 100%;
-    color: #3dcfb6;
+    color: #e8b91b;
   }
 
   &:hover {
-    border-color: #3dcfb6;
+    border-color: #e8b91b;
     color: transparent;
   }
 
