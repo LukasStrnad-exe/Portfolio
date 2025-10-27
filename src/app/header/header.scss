@@ -4,6 +4,11 @@ header {
   justify-content: space-between;
   padding: 15px 0;
   background-color: transparent;
+  position: absolute;
+  top: 0;
+  left: 10%;
+  right: 10%;
+  max-width: 1440px;
 }
 
 nav {
@@ -48,18 +53,18 @@ a {
   flex-direction: column;
 
   &::after {
-      content: '';
-      transform: scale(0);
-      width: 6px;
-      height: 6px;
-      margin-top: 5px;
-      background-color: #e8b91b;
-      border-radius: 50%;
-      transition: transform 0.3s ease;
+    content: '';
+    transform: scale(0);
+    width: 6px;
+    height: 6px;
+    margin-top: 5px;
+    background-color: #e8b91b;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
   }
 
   &:hover::after {
-      transform: scale(1);
+    transform: scale(1);
   }
 }
 
