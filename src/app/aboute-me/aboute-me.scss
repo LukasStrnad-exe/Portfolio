@@ -8,8 +8,8 @@
 
 .about_me_content {
     position: relative;
-    width: 90%;
-    height: 90%;
+    width: 100%;
+    height: 100%;
 
     .selfie {
         width: 45%;
@@ -25,23 +25,6 @@
     position: absolute;
     bottom: 0px;
     right: 0px;
-
-    .text_content {
-        background-color: #e8b81b1a;
-        border-radius: 30px;
-        padding: 5%;
-        border: solid 1px #e8b91b
-    }
-
-    h4 {
-        color: #e8b91b;
-    }
-
-    h2 {
-        color: #e8b91b;
-    }
-
-
 }
 
 .checkpoint {

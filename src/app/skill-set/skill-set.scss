@@ -6,8 +6,21 @@
     min-height: 100dvh;
 }
 
-.skill_set_container {
-    position: relative;
-    width: 90%;
-    height: 90%;
+.mainColor {
+    color: #e8b91b;
+}
+
+.skill_set_content {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+}
+
+.skill_img {
+    width: 200%;
+    max-height: 100%;
+
+    img {
+        margin-left: calc(25% - 64px);
+    }
 }
