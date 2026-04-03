@@ -1,27 +1,24 @@
 <div class="wrapper">
-    <h4>Technologies</h4>
-    <div class="skill_set_content">
-        <div class="highlight_div">
-            <h2>Skill Set</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere nesciunt ratione qui sint? Maiores, culpa totam debitis ad optio, ut eveniet rem perferendis enim odio, illo numquam ipsa amet quae.</p>
-            <h3>You need <span class="mainColor">another skill?</span></h3>
-            <p>Feel free to contact me. I look forward to expanding on my previous knowledge.</p>
-            <button data-text="Let's Talk">Let's Talk</button>
-        </div>
-        <div id="skills" class="skill_img">
-            <div>
-                <img src="\assets\img\skills\HTML.png" alt="HTML">
-                HTML
-            </div>
-            <img src="\assets\img\skills\CSS.png" alt="CSS">
-            <img src="\assets\img\skills\JS.png" alt="Javascript">
-            <img src="\assets\img\skills\MD.png" alt="Material Design">
-            <img src="\assets\img\skills\TS.png" alt="Typescript">
-            <img src="\assets\img\skills\A.png" alt="Angular">
-            <img src="\assets\img\skills\Firebase.png" alt="Firebase">
-            <img src="\assets\img\skills\Git.png" alt="Git">
-            <img src="\assets\img\skills\Rest-api.png" alt="Rest-api">
-            <img src="\assets\img\skills\mindset.png" alt="growth mindset">
-        </div>
+  <h4>Technologies</h4>
+  <div class="skill_set_content">
+    <div class="highlight_div width_40">
+      <h2>Skill Set</h2>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere nesciunt ratione qui sint?
+        Maiores, culpa totam debitis ad optio, ut eveniet rem perferendis enim odio, illo numquam
+        ipsa amet quae.
+      </p>
+      <h3>You need <span class="mainColor">another skill?</span></h3>
+      <p>Feel free to contact me. I look forward to expanding on my previous knowledge.</p>
+      <button data-text="Let's Talk">Let's Talk</button>
     </div>
+    <div id="skills" class="skills">
+      @for (img of images; track img) {
+        <div class="skill">
+          <img src="\assets\img\skills\{{ img }}" alt="{{ img.split('.')[0] }}" />
+          <p>{{ img.split('.')[0] }}</p>
+        </div>
+      }
+    </div>
+  </div>
 </div>

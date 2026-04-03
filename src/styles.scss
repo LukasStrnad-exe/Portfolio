@@ -1,6 +1,6 @@
 body {
   margin: 0 auto;
-  font-family: "Fira Code", sans-serif;
+  font-family: 'Fira Code', sans-serif;
   min-height: 100dvh;
   background-color: #292929;
   color: white;
@@ -13,28 +13,28 @@ a {
 }
 
 h1 {
-  font-family: "Karla", sans-serif;
+  font-family: 'Karla', sans-serif;
   font-size: 128px;
   font-weight: 700;
   margin: 0;
 }
 
 h2 {
-  font-family: "Karla", sans-serif;
+  font-family: 'Karla', sans-serif;
   font-size: 64px;
   font-weight: 700;
   margin: 0;
 }
 
 h3 {
-  font-family: "Karla", sans-serif;
+  font-family: 'Karla', sans-serif;
   font-size: 40px;
   font-weight: 700;
   margin: 0;
 }
 
 h4 {
-  font-family: "Karla", sans-serif;
+  font-family: 'Karla', sans-serif;
   font-size: 24px;
   font-weight: 500;
   margin: 0;
@@ -54,7 +54,7 @@ p {
   background-color: #e8b81b1a;
   border-radius: 30px;
   padding: 5%;
-  border: solid 1px #e8b91b
+  border: solid 1px #e8b91b;
 }
 
 h4 {
@@ -66,7 +66,7 @@ h2 {
 }
 
 button {
-  font-family: "Karla", sans-serif;
+  font-family: 'Karla', sans-serif;
   font-size: 18px;
   border: 1px solid white;
   border-radius: 25px;
@@ -133,7 +133,6 @@ button {
 }
 
 @keyframes scrollBounce {
-
   0%,
   100% {
     transform: translateY(0);

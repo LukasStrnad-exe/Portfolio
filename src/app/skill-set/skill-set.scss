@@ -1,26 +1,38 @@
 .skill_set {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    min-height: 100dvh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 100dvh;
 }
 
 .mainColor {
-    color: #e8b91b;
+  color: #e8b91b;
 }
 
 .skill_set_content {
-    display: flex;
-    justify-content: center;
-    align-items: start;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  gap: 100px;
 }
 
-.skill_img {
-    width: 200%;
-    max-height: 100%;
+.skills {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  flex-wrap: wrap;
+  gap: 70px;
+  width: 200%;
+}
 
-    img {
-        margin-left: calc(25% - 64px);
-    }
+.skill {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  img{
+    width: 80px;
+  }
 }
