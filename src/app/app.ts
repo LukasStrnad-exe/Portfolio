@@ -4,13 +4,14 @@ import { Header } from './header/header';
 import { AboveTheFold } from './above-the-fold/above-the-fold';
 import { AbouteMe } from './aboute-me/aboute-me';
 import { SkillSet } from './skill-set/skill-set';
+import { FeaturedProjects } from './featured-projects/featured-projects';
 
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, Header, AboveTheFold, AbouteMe, SkillSet],
+  imports: [RouterOutlet, Header, AboveTheFold, AbouteMe, SkillSet, FeaturedProjects],
   templateUrl: './app.html',
-  styleUrls: ['./app.scss']
+  styleUrls: ['./app.scss'],
 })
 export class App {
   protected readonly title = signal('Portfolio');

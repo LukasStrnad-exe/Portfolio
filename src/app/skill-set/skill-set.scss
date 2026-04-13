@@ -6,8 +6,8 @@
   min-height: 100dvh;
 }
 
-.mainColor {
-  color: #e8b91b;
+.white_color {
+  color: white;
 }
 
 .skill_set_content {
@@ -15,6 +15,7 @@
   justify-content: center;
   align-items: start;
   gap: 100px;
+  margin-top: 50px;
 }
 
 .skills {
@@ -35,4 +36,8 @@
   img{
     width: 80px;
   }
+}
+
+.font_16{
+  font-size: 16px;
 }
