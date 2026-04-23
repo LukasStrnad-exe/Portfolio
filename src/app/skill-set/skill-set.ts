@@ -9,15 +9,15 @@ import { generate } from 'rxjs';
 })
 export class SkillSet {
   images = [
-    'HTML.png',
-    'CSS.png',
-    'JS.png',
-    'MD.png',
-    'TS.png',
-    'A.png',
-    'Firebase.png',
-    'Git.png',
-    'Rest-api.png',
-    'mindset.png',
+    'HTML.svg',
+    'CSS.svg',
+    'JavaScript.svg',
+    'Material Design.svg',
+    'TypeScript.svg',
+    'Angular.svg',
+    'Firebase.svg',
+    'Git.svg',
+    'Rest-Api.svg',
+    'mindset.svg',
   ];
 }

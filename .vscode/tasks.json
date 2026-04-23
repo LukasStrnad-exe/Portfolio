@@ -3,8 +3,9 @@
   "version": "2.0.0",
   "tasks": [
     {
-      "type": "npm",
-      "script": "start",
+      "type": "shell",
+      "command": "powershell -ExecutionPolicy Bypass -Command \"ng serve --open\"",
+      "label": "ng serve auto",
       "isBackground": true,
       "problemMatcher": {
         "owner": "typescript",
@@ -18,6 +19,9 @@
             "regexp": "bundle generation complete"
           }
         }
+      },
+      "runOptions": {
+        "runOn": "folderOpen"
       }
     },
     {
@@ -36,6 +40,14 @@
             "regexp": "bundle generation complete"
           }
         }
+      }
+    },
+    {
+      "type": "shell",
+      "label": "Open Figma",
+      "command": "start https://www.figma.com/design/eqUOC0Fh2PuKwG4x0kUFHh",
+      "runOptions": {
+        "runOn": "folderOpen"
       }
     }
   ]

@@ -4,10 +4,9 @@
   <p>Explore a selection of my work here - Interact with projects to see my skills in action.</p>
   <div class="projects">
     <div class="btn_container">
-      <div class="btn_project btn_border">
+      <div class="btn_project btn_border" (click)="projectDetail()">
         <div>
           <h4>Join</h4>
-          <img class="btn_arrow" src="/assets/img/projects/arrow_outward.png" alt="projects" />
         </div>
         <div>
           Angular <span class="pipe">|</span> TypeScript <span class="pipe">|</span> Firebase
@@ -44,5 +43,8 @@
         </div>
       </div>
     </div>
+  </div>
+  <div>
+    <app-detail-projects class="detail_projects" id="detailContainer"></app-detail-projects>
   </div>
 </div>
