@@ -4,39 +4,43 @@
   <p>Explore a selection of my work here - Interact with projects to see my skills in action.</p>
   <div class="projects">
     <div class="btn_container">
-      <div class="btn_project btn_border" (click)="projectDetail()">
+      <div class="btn_project btn_border" (click)="openDetail(0)">
         <div>
-          <h4>Join</h4>
+          <h4>{{ projects[0].name }}</h4>
+          <img class="btn_arrow" src="/assets/img/projects/arrow_outward.png" alt="projects" />
         </div>
         <div>
-          Angular <span class="pipe">|</span> TypeScript <span class="pipe">|</span> Firebase
-          <span class="pipe">|</span> HTML <span class="pipe">|</span> CSS
+          <span *ngFor="let skill of projects[0].skills; let last = last">
+            {{ skill }} <span *ngIf="!last" class="pipe">|</span>
+          </span>
         </div>
         <div class="img_bg btn_img btn_img_top">
           <img src="/assets/img/projects/Rectangle 30.png" alt="" />
         </div>
       </div>
-      <div class="btn_project">
+      <div class="btn_project" (click)="openDetail(1)">
         <div>
-          <h4>Join</h4>
+          <h4>{{ projects[1].name }}</h4>
           <img class="btn_arrow" src="/assets/img/projects/arrow_outward.png" alt="projects" />
         </div>
         <div>
-          Angular <span class="pipe">|</span> TypeScript <span class="pipe">|</span> Firebase
-          <span class="pipe">|</span> HTML <span class="pipe">|</span> CSS
+          <span *ngFor="let skill of projects[1].skills; let last = last">
+            {{ skill }} <span *ngIf="!last" class="pipe">|</span>
+          </span>
         </div>
         <div class="img_bg btn_img">
           <img src="/assets/img/projects/Rectangle 30.png" alt="" />
         </div>
       </div>
-      <div class="btn_project btn_border">
+      <div class="btn_project btn_border" (click)="openDetail(2)">
         <div>
-          <h4>Join</h4>
+          <h4>{{ projects[2].name }}</h4>
           <img class="btn_arrow" src="/assets/img/projects/arrow_outward.png" alt="projects" />
         </div>
         <div>
-          Angular <span class="pipe">|</span> TypeScript <span class="pipe">|</span> Firebase
-          <span class="pipe">|</span> HTML <span class="pipe">|</span> CSS
+          <span *ngFor="let skill of projects[2].skills; let last = last">
+            {{ skill }} <span *ngIf="!last" class="pipe">|</span>
+          </span>
         </div>
         <div class="img_bg btn_img btn_img_bottom">
           <img src="/assets/img/projects/Rectangle 30.png" alt="" />
@@ -45,6 +49,12 @@
     </div>
   </div>
   <div>
-    <app-detail-projects class="detail_projects" id="detailContainer"></app-detail-projects>
+    <app-detail-projects
+      (close)="closeDetail()"
+      *ngIf="showDetail"
+      id="detailContainer"
+      [projects]="projects"
+      [projectId]="selectedProjectId"
+    ></app-detail-projects>
   </div>
 </div>
