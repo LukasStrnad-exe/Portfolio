@@ -20,10 +20,10 @@
 
 .skills {
   display: flex;
-  align-items: center;
-  justify-content: start;
+  align-items: flex-start;
+  justify-content: flex-start;
   flex-wrap: wrap;
-  gap: 70px;
+  gap: 50px;
   width: 200%;
 }
 
@@ -32,6 +32,16 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  width: 110px;
+
+  p{
+    text-align: center;
+  }
+
+  :hover{
+    transform: scale(1.2);
+    transition: all 0.2s ease-in-out;
+  }
 
   img{
     width: 80px;
