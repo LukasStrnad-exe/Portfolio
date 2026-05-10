@@ -5,11 +5,12 @@ import { AboveTheFold } from './above-the-fold/above-the-fold';
 import { AbouteMe } from './aboute-me/aboute-me';
 import { SkillSet } from './skill-set/skill-set';
 import { FeaturedProjects } from './featured-projects/featured-projects';
+import { ContactMe } from './contact-me/contact-me';
 
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, Header, AboveTheFold, AbouteMe, SkillSet, FeaturedProjects],
+  imports: [RouterOutlet, Header, AboveTheFold, AbouteMe, SkillSet, FeaturedProjects, ContactMe],
   templateUrl: './app.html',
   styleUrls: ['./app.scss'],
 })

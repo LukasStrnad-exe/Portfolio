@@ -1,0 +1,114 @@
+.conact_me {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  margin-top: 50px;
+  margin-bottom: 50px;
+
+  .left {
+    width: 50%;
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    flex-direction: column;
+
+    h2 {
+      margin-top: 20px;
+      margin-bottom: 40px;
+    }
+
+    p {
+      margin-bottom: 0px;
+      font-size: 16px;
+    }
+
+    span {
+      color: #e8b91b;
+    }
+  }
+
+  .right {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    div {
+      width: 100%;
+      padding: 5%;
+      display: flex;
+      align-items: start;
+      justify-content: center;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .border {
+      border-bottom: solid #e8b91b 1px;
+      border-top: solid #e8b91b 1px;
+      width: 100%;
+    }
+
+    input {
+      width: 100%;
+      padding: 10px 0px;
+      background-color: transparent;
+      color: #fff;
+      border: none;
+      font-size: 18px;
+
+      &:focus {
+        outline: none;
+      }
+
+      &:-webkit-autofill {
+        -webkit-box-shadow: 0 0 0px 1000px #1c1c1c inset;
+        -webkit-text-fill-color: #fff;
+        transition: background-color 9999s ease-in-out 0s;
+      }
+    }
+
+    .terms {
+      flex-direction: row;
+      align-items: center;
+      padding: 0px;
+      margin-top: 40px;
+      width: 100%;
+      font-size: 14px;
+
+      input {
+        appearance: none;
+        width: 18px;
+        height: 18px;
+        border: 2px solid #e8b91b;
+        background-color: transparent;
+        cursor: pointer;
+        padding: 0px;
+
+        &:checked {
+          &::after {
+            content: '';
+            display: block;
+            width: 4px;
+            height: 8px;
+            border: solid #e8b91b;
+            border-width: 0 2px 2px 0;
+            transform: rotate(45deg);
+            position: relative;
+            left: 4px;
+            top: 0px;
+          }
+        }
+      }
+
+      span {
+        color: #e8b91b;
+      }
+    }
+
+    .button_container {
+      align-items: center;
+    }
+  }
+}
