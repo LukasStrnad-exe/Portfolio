@@ -10,34 +10,77 @@
     <p class="font_16">Need a Frontend developer? <span class="color">Let’s talk!</span></p>
   </div>
   <div class="right">
-    <form>
+    <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm" novalidate>
       <div class="border">
         <label for="name"><h4>What's your name?</h4></label>
-        <input type="text" id="name" name="name" placeholder="Your name goes here" required />
+        <input
+          type="text"
+          [(ngModel)]="name"
+          id="name"
+          name="name"
+          #nameField="ngModel"
+          [ngClass]="{ invalid_input: nameField.invalid && nameField.touched }"
+          [placeholder]="
+            nameField.invalid && nameField.touched ? 'Name is required' : 'Your name goes here'
+          "
+          required
+        />
       </div>
       <div>
         <label for="email"><h4>What's your email?</h4></label>
-        <input type="email" id="email" name="email" placeholder="youremail@email.com" required />
+        <input
+          type="email"
+          [(ngModel)]="email"
+          id="email"
+          name="email"
+          #emailField="ngModel"
+          [ngClass]="{ invalid_input: emailField.invalid && emailField.touched }"
+          [placeholder]="
+            emailField.invalid && emailField.touched
+              ? 'Valid email required'
+              : 'youremail@email.com'
+          "
+          required
+        />
       </div>
       <div class="border">
-        <label for="subject"><h4>How can I help you?</h4></label>
+        <label for="message"><h4>How can I help you?</h4></label>
         <input
           type="text"
-          id="subject"
-          name="subject"
-          placeholder="Hello Lukas, I am interested in..."
+          [(ngModel)]="message"
+          id="message"
+          name="message"
+          #messageField="ngModel"
+          [ngClass]="{ invalid_input: messageField.invalid && messageField.touched }"
+          [placeholder]="
+            messageField.invalid && messageField.touched
+              ? 'Message is required'
+              : 'Hello Lukas, I am interested in...'
+          "
           required
         />
       </div>
       <div class="terms">
-        <input type="checkbox" id="terms" name="terms" required />
+        <input (click)="termsTouched = true" type="checkbox" [(ngModel)]="terms" id="terms" name="terms" required />
         <label for="terms">
-          I've read the <span class="color"> privacy policy</span> and agree to the processing of my data as outlined.
+          I've read the <span class="color"> privacy policy</span> and agree to the processing of my
+          data as outlined.
         </label>
+        <div class="terms_invalid" *ngIf="!terms && termsTouched">
+          Please accept the privacy policy
+        </div>
       </div>
       <div class="button_container">
-      <button data-text="Say Hello ;)" type="submit">Say Hello ;)</button>
+        <button [attr.data-text]="isLoading ? 'Sending...' : 'Say Hello ;)'" type="submit" [disabled]="isLoading || contactForm.invalid">
+          {{ isLoading ? 'Sending...' : 'Say Hello ;)' }}
+        </button>
       </div>
     </form>
   </div>
+
+  @if (isShown()) {
+    <div animate.enter="enter-animation" animate.leave="leaving" class="success_message">
+      <div>Email sent successfully! I will get back to you soon.</div>
+    </div>
+  }
 </div>
