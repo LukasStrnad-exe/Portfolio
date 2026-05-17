@@ -61,7 +61,14 @@
         />
       </div>
       <div class="terms">
-        <input (click)="termsTouched = true" type="checkbox" [(ngModel)]="terms" id="terms" name="terms" required />
+        <input
+          (click)="termsTouched = true"
+          type="checkbox"
+          [(ngModel)]="terms"
+          id="terms"
+          name="terms"
+          required
+        />
         <label for="terms">
           I've read the <span class="color"> privacy policy</span> and agree to the processing of my
           data as outlined.
@@ -71,7 +78,11 @@
         </div>
       </div>
       <div class="button_container">
-        <button [attr.data-text]="isLoading ? 'Sending...' : 'Say Hello ;)'" type="submit" [disabled]="isLoading || contactForm.invalid">
+        <button
+          [attr.data-text]="isLoading ? 'Sending...' : 'Say Hello ;)'"
+          type="submit"
+          [disabled]="isLoading || contactForm.invalid"
+        >
           {{ isLoading ? 'Sending...' : 'Say Hello ;)' }}
         </button>
       </div>

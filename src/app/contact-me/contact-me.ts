@@ -24,33 +24,32 @@ export class ContactMe {
   }
 
   onSubmit(form: any) {
-    if (!form.valid) {
-      this.errorMessage = 'Please fill all fields correctly';
-      return;
-    }
-
     this.isLoading = true;
-    this.errorMessage = '';
     this.termsTouched = false;
-
-    emailjs
-      .send('service_v8y9ikl', 'template_b75bhns', {
-        name: this.name,
-        email: this.email,
-        message: this.message,
-      })
+    this.sendEmail()
       .then(() => {
-        this.toggleSuccesMessage();
+        this.showSuccesMessage();
         this.isLoading = false;
         form.resetForm();
-
-        setTimeout(() => this.toggleSuccesMessage(), 3000);
       })
       .catch((err) => {
         console.error('Failed to send email:', err);
         this.errorMessage = 'Failed to send email. Please try again.';
         this.isLoading = false;
       });
+  }
+
+  sendEmail() {
+    return emailjs.send('service_v8y9ikl', 'template_b75bhns', {
+      name: this.name,
+      email: this.email,
+      message: this.message,
+    });
+  }
+
+  showSuccesMessage() {
+    this.toggleSuccesMessage();
+    setTimeout(() => this.toggleSuccesMessage(), 3000);
   }
 
   toggleSuccesMessage() {
