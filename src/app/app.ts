@@ -6,11 +6,21 @@ import { AbouteMe } from './aboute-me/aboute-me';
 import { SkillSet } from './skill-set/skill-set';
 import { FeaturedProjects } from './featured-projects/featured-projects';
 import { ContactMe } from './contact-me/contact-me';
+import { Footer } from './footer/footer';
 
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, Header, AboveTheFold, AbouteMe, SkillSet, FeaturedProjects, ContactMe],
+  imports: [
+    RouterOutlet,
+    Header,
+    AboveTheFold,
+    AbouteMe,
+    SkillSet,
+    FeaturedProjects,
+    ContactMe,
+    Footer,
+  ],
   templateUrl: './app.html',
   styleUrls: ['./app.scss'],
 })

@@ -67,18 +67,3 @@ a {
     transform: scale(1);
   }
 }
-
-.logo {
-  height: 48px;
-  width: 133px;
-  cursor: pointer;
-  background-image: url(/assets/img/header/Logo.png);
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-  transition: background-image 0.3s ease;
-
-  &:hover {
-    background-image: url(/assets/img/header/Logo_hover.png);
-  }
-}

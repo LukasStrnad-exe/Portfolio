@@ -59,6 +59,21 @@ p {
   border: solid 1px #e8b91b;
 }
 
+.logo {
+  height: 48px;
+  width: 133px;
+  cursor: pointer;
+  background-image: url(/assets/img/header/Logo.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: background-image 0.3s ease;
+
+  &:hover {
+    background-image: url(/assets/img/header/Logo_hover.png);
+  }
+}
+
 button {
   font-family: 'Karla', sans-serif;
   font-size: 18px;
